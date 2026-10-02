@@ -1,7 +1,7 @@
 # 캐릭터 사주 사이트 — Claude Code 인계 문서
 
 작성일 2026-10-02 · claude.ai 채팅에서 만든 시안을 Claude Code로 넘기는 문서입니다.
-저장소: `https://github.com/aksdn1233-dev/innerarc` (이 폴더를 저장소에 넣어 이어서 작업)
+저장소: `https://github.com/aksdn1233-dev/jinssung` (2026-10-02 확정 — 여기서 계속 작업. innerarc는 별도 제품)
 
 ---
 
@@ -12,9 +12,8 @@
 | **흑월관 사이트 (확정 캐릭터 흑월)** | 시안 완료 | `dist/heukwol-saju.html` | https://claude.ai/artifact/Ueu1rJ9NJdcsRZrARrMPyZ |
 | **흑월관 결과 리포트 (무료/기본/심화)** | 시안 완료 · 전 구간 검증 | `dist/heukwol-reports.html` | https://claude.ai/artifact/4XKEW9eZ5aijaSK79PnkJD |
 | 월식사주 (서월) | 시안 | `dist/wolsik-saju.html` | https://claude.ai/artifact/DUK92m2L37Lomn8PJvWmV1 |
-| 용궁사주 (해랑) | 시안 (게시본은 구버전) | `dist/yonggung-saju.html` | https://claude.ai/artifact/WCrApz7AnS4GGPCnPVk2YN |
 | 쌍월당 (서월 × 흑월 듀오, 신명타로 흐름) | 구버전 시안 · 정적 파일 | `dist/ssangwol-duo.html` | https://claude.ai/artifact/1xY7j15HzR16m5d51KAB1S |
-| 전생 캐릭터 36종 시안 | 확정 대기 · 정적 파일 | `dist/character-36-types.html` | https://claude.ai/artifact/WCu2GfQ6QGDFpja6yhyjrQ |
+| 전생 캐릭터 36종 시안 | **확정** (2026-10-02) · 정적 파일 | `dist/character-36-types.html` | https://claude.ai/artifact/WCu2GfQ6QGDFpja6yhyjrQ |
 | 모션 컨셉 바이블 (Vidu용) | 문서 | `docs/motion-bible.md` | https://claude.ai/code/artifact/fca01f94-f48e-4513-b5bd-849d121dd893 |
 | 서준님 확인·지원 필요 목록 | 계속 갱신 | `docs/pending.md` | https://claude.ai/code/artifact/f2be38e9-a808-48e4-a9dc-c77aac3a99aa |
 
@@ -25,6 +24,8 @@
 
 ## 2. 서준님이 정한 원칙 (반드시 지킬 것)
 
+> 2026-10-02: **용궁사주(해랑) 폐기** — 저장소·빌드에서 제거.
+
 1. **레퍼런스 구조**: 할마카세(`grandma-saju.com/saju`)의 흐름 그대로 — 랜딩 → 입력 6단계(이름·성별·생년월일·시간·성격유형·궁금한 것, 캐릭터 말풍선) → 로딩 → 15챕터 책형 리포트(상단 챕터명·하단 목차/이전/다음/진행도) → 결제 유도. 화면 캡처는 `reference/halmakase/`.
 2. **모든 문장은 캐릭터 말투**: UI 문구·오류·리포트·결제·FAQ까지. 흑월 = 나른하고 무심한 퇴폐 반말("앉아. 이름부터." / "외상은 안 받는다니까.").
 3. **리포트는 객관적이어야 함**: 모든 해석 아래 `📐 근거` 줄. 같은 입력 = 같은 결과(난수 금지). 점수는 산출식 공개.
@@ -33,7 +34,7 @@
 6. **결제 2단계**: 기본 상세 39,000원 / 고급 심화 79,000원. 심화는 기본보다 양·질 모두 위.
 7. **심화를 AI로 때우지 말 것**: 계산 기반 콘텐츠만. 고대신점(주역)·인생 나침반·재물 그릇 등.
 8. **멘트**: "너 되게 운 좋은 거야… 니 인생의 나침반이자 네비게이션 같은 시스템을 만났으니까" (심화 1에 반영됨).
-9. **상징 캐릭터 = 전생 인물 36종** (레퍼런스 「전생의 정체」 일러스트 결). 조선 배경, 성별·신분 다양.
+9. **상징 캐릭터 = 전생 인물 36종** (레퍼런스 「전생의 정체」 일러스트 결). **나라·시대 제한 없음**(2026-10-02 서준님), 성별·신분 다양.
 10. **1900년생~오늘 태어난 사람까지** 누구든 리포트가 나와야 함 (검증 완료, §6).
 11. **친구 초대·공유를 자연스럽게** (신명타로식): Ch2 끝 공유 카드, Ch4 끝 초대 카드(초대 1명 → Ch5 해제), 결제 화면 초대 행.
 12. **흑월 캐릭터 시트 확정** (`assets/source/heukwol_character_sheet_CONFIRMED.png`).
@@ -45,13 +46,13 @@
 ## 3. 폴더 구조
 
 ```
-build.py                 src + assets → dist (캐릭터 사이트 3개 + 결과 리포트)
+build.py                 src + assets → dist (캐릭터 사이트 2개 + 결과 리포트)
 src/tpl.html             단일 파일 SPA 템플릿 (계산 엔진 + 무료 리포트 + 랜딩/입력/로딩) — __CFG__ 에 캐릭터 설정 주입
 src/paid.js              결과 리포트 페이지 전용 확장 (<style>+<script>, tpl의 </body> 앞에 삽입):
                          입력 패널 · 무료/기본/심화 탭 · 기본 Ch5~14 · 심화 1~10 · 고대신점 · 궁합
-src/characters.py        캐릭터 3종 설정 (말투 문구 전부). CH 리스트
-assets/images.json       캐릭터 이미지 data URI (wolsik, yonggung, heukwol{land,face,face2,cover,past,pay,coverPos})
-assets/source/           원본 캐릭터 이미지 (흑월 확정 시트, 서월, 해랑, 자정마트 5인)
+src/characters.py        캐릭터 설정 (월식·흑월, 말투 문구 전부). CH 리스트
+assets/images.json       캐릭터 이미지 data URI (wolsik, heukwol{land,face,face2,cover,past,pay,coverPos})
+assets/source/           원본 이미지 (canva/: 전생 36 · 배우자 10 · 듀오 원본)
 assets/vidu/             Vidu 첫 테스트용 참조 프레임 (흑월 시트에서 크롭)
 reference/halmakase/     레퍼런스 /saju 화면 캡처 40장 (입력·리포트·결제 흐름)
 dist/                    빌드 결과 + 정적 시안(character-36-types, ssangwol-duo)
@@ -66,9 +67,13 @@ docs/pending.md          서준님 확인·지원 필요 목록
 ```bash
 python3 build.py                                   # dist/ 갱신
 python3 tests/test_calc_full.py                    # 648,144건 (1900-01-01~오늘 × 14시간) — 기대: errors 0
-for k in 0 1 2 3 4 5; do python3 tests/test_render.py $k 6; done   # 약 6,600명 렌더 — 기대: failures []
+for k in 0 1 2 3 4 5; do python3 tests/test_render.py $k 6; done   # 7일 간격 + 경계일 렌더 — 기대: n_fail 0
 ```
-마지막 검증(2026-10-02): 계산 648,144건 오류 0 · 렌더 6,614명 + 경계일 566건 오류 0.
+의존: node · `pip install -r requirements.txt` (ephem, playwright). playwright 브라우저 버전이 안 맞으면 `CHROMIUM_PATH`로 chromium 지정.
+- `test_calc_full.py`: 년주·월주를 ephem(VSOP87) 태양 황경으로, 일주를 파이썬 날짜로, 시주를 오서둔 표로 따로 계산해 엔진과 대조. 절기 경계 0.02°(약 29분) 이내 불일치는 저정밀식 한계라 `edge_skipped`로만 셈.
+- `test_render.py`: JS 오류 · undefined/NaN/null 노출 · 탭/챕터 누락 · 📐 근거 줄 감소 · 같은 입력 재계산 불일치를 실패로 셈.
+
+마지막 검증(2026-10-02, 저장소 복원 후): 계산 648,144건 오류 0 (경계 60건 제외) · 렌더 6,614명 + 경계일 568건 오류 0.
 
 ---
 
@@ -114,18 +119,18 @@ for k in 0 1 2 3 4 5; do python3 tests/test_render.py $k 6; done   # 약 6,600�
 
 ## 7. 알려진 한계 · 다음 작업 (우선순위)
 
-1. **저장소 정리**: 이 폴더를 innerarc에 커밋. `dist/`는 빌드 산출물(CI에서 생성 권장).
+1. ~~**저장소 정리**~~ (2026-10-02 완료, jinssung 저장소로 확정): 소스는 게시본에서 복원, 테스트 재작성. 원본 이미지·레퍼런스 캡처는 아직 미업로드(`docs/pending.md`). `dist/`는 빌드 산출물(CI에서 생성 권장).
 2. **이미지를 data URI → 파일로 분리**: 현재 HTML 하나가 0.2~0.5MB. `assets/` 경로 참조로 바꾸면 가벼워짐.
 3. **JS 모듈화**: tpl.html 안의 엔진·라이브러리·렌더러를 `engine.js / content/*.js / render.js`로 분리하고, 계산 엔진은 node 단위 테스트로.
 4. **태령당 수비학 교체**: `LP/LPD/POKE/PY` 계열과 Ch1·기본 Ch5~6·심화 2·5의 숫자 파트. 자료 받으면 교체(근거 문구 포함).
 5. **음력 → 양력 변환표** (입력 화면 음력 선택 시). 고대신점도 음력 월·일로 정식 계산.
 6. **백엔드**: 결제(PG) · 결과 저장/다시 찾기 · 카카오 로그인 · 친구 초대 집계 → Ch5 잠금 해제 · 추가 질문은 넣지 않음(서준님: AI로 때우지 말 것).
 7. **카피 컴플라이언스**: 누적 건수·만족도·후기·할인 타이머는 모두 "예시" 자리표시 → 실데이터로 교체 전 오픈 금지(표시광고법·전자상거래법).
-8. **이미지 에셋**: 전생 36종(3장 생성됨, 33장 대기) · 배우자 10종(2장 생성, 8장 대기) · 쌍월당 듀오 컷. 모두 Canva 생성, 프롬프트는 `PAST36[i][j][4]`, `SPP`.
+8. **이미지 에셋**: 2026-10-02 47장 생성 완료(전생 36 · 배우자 10 · 쌍월당 듀오 1) → `assets/img/` (`build.py`가 `dist/img/`로 복사, 리포트는 `img/past/NN.jpg` · `img/spouse/{오행}{f|m}.jpg` 참조). 프롬프트·Canva media id는 `assets/img/manifest.json`. 원본은 `assets/source/canva/`, 사이트용 축소본은 `assets/img/`. **남은 것: 듀오 컷을 쌍월당 페이지에 배치.**
 9. **Vidu 영상 파이프라인**: `docs/motion-bible.md` 기준. 첫 테스트는 무료 크레딧 1회(`docs/pending.md` 하단 설정). 결과물은 MP4+WebM, 클립당 2MB 이하로 랜딩·선택·로딩·결과 화면에 삽입.
-10. **월식사주·용궁사주·쌍월당**: 흑월 기준 최신 엔진으로 동기화 필요 시 `characters.py`만 손보면 됨(쌍월당은 별도 구조).
+10. **월식사주·쌍월당**: 흑월 기준 최신 엔진으로 동기화 필요 시 `characters.py`만 손보면 됨(쌍월당은 별도 구조).
 
 ## 8. 협업 메모
 - 서준님은 한국어, 짧고 직접적인 보고를 선호. 결과는 claude.ai 시안처럼 바로 열어볼 수 있게.
-- 외부 계정: Canva(생성 한도 자주 소진), Vidu(로그인 완료), GitHub innerarc.
+- 외부 계정: Canva(2026-10-02 크레딧 충전), Vidu(로그인 완료), GitHub jinssung.
 - 사용자 도움이 필요한 항목은 `docs/pending.md`에 계속 추가·체크.
