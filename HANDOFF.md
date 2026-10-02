@@ -12,9 +12,8 @@
 | **흑월관 사이트 (확정 캐릭터 흑월)** | 시안 완료 | `dist/heukwol-saju.html` | https://claude.ai/artifact/Ueu1rJ9NJdcsRZrARrMPyZ |
 | **흑월관 결과 리포트 (무료/기본/심화)** | 시안 완료 · 전 구간 검증 | `dist/heukwol-reports.html` | https://claude.ai/artifact/4XKEW9eZ5aijaSK79PnkJD |
 | 월식사주 (서월) | 시안 | `dist/wolsik-saju.html` | https://claude.ai/artifact/DUK92m2L37Lomn8PJvWmV1 |
-| 용궁사주 (해랑) | 시안 (게시본은 구버전) | `dist/yonggung-saju.html` | https://claude.ai/artifact/WCrApz7AnS4GGPCnPVk2YN |
 | 쌍월당 (서월 × 흑월 듀오, 신명타로 흐름) | 구버전 시안 · 정적 파일 | `dist/ssangwol-duo.html` | https://claude.ai/artifact/1xY7j15HzR16m5d51KAB1S |
-| 전생 캐릭터 36종 시안 | 확정 대기 · 정적 파일 | `dist/character-36-types.html` | https://claude.ai/artifact/WCu2GfQ6QGDFpja6yhyjrQ |
+| 전생 캐릭터 36종 시안 | **확정** (2026-10-02) · 정적 파일 | `dist/character-36-types.html` | https://claude.ai/artifact/WCu2GfQ6QGDFpja6yhyjrQ |
 | 모션 컨셉 바이블 (Vidu용) | 문서 | `docs/motion-bible.md` | https://claude.ai/code/artifact/fca01f94-f48e-4513-b5bd-849d121dd893 |
 | 서준님 확인·지원 필요 목록 | 계속 갱신 | `docs/pending.md` | https://claude.ai/code/artifact/f2be38e9-a808-48e4-a9dc-c77aac3a99aa |
 
@@ -24,6 +23,8 @@
 ---
 
 ## 2. 서준님이 정한 원칙 (반드시 지킬 것)
+
+> 2026-10-02: **용궁사주(해랑) 폐기** — 저장소·빌드에서 제거.
 
 1. **레퍼런스 구조**: 할마카세(`grandma-saju.com/saju`)의 흐름 그대로 — 랜딩 → 입력 6단계(이름·성별·생년월일·시간·성격유형·궁금한 것, 캐릭터 말풍선) → 로딩 → 15챕터 책형 리포트(상단 챕터명·하단 목차/이전/다음/진행도) → 결제 유도. 화면 캡처는 `reference/halmakase/`.
 2. **모든 문장은 캐릭터 말투**: UI 문구·오류·리포트·결제·FAQ까지. 흑월 = 나른하고 무심한 퇴폐 반말("앉아. 이름부터." / "외상은 안 받는다니까.").
@@ -45,13 +46,13 @@
 ## 3. 폴더 구조
 
 ```
-build.py                 src + assets → dist (캐릭터 사이트 3개 + 결과 리포트)
+build.py                 src + assets → dist (캐릭터 사이트 2개 + 결과 리포트)
 src/tpl.html             단일 파일 SPA 템플릿 (계산 엔진 + 무료 리포트 + 랜딩/입력/로딩) — __CFG__ 에 캐릭터 설정 주입
 src/paid.js              결과 리포트 페이지 전용 확장 (<style>+<script>, tpl의 </body> 앞에 삽입):
                          입력 패널 · 무료/기본/심화 탭 · 기본 Ch5~14 · 심화 1~10 · 고대신점 · 궁합
-src/characters.py        캐릭터 3종 설정 (말투 문구 전부). CH 리스트
-assets/images.json       캐릭터 이미지 data URI (wolsik, yonggung, heukwol{land,face,face2,cover,past,pay,coverPos})
-assets/source/           원본 캐릭터 이미지 (흑월 확정 시트, 서월, 해랑, 자정마트 5인)
+src/characters.py        캐릭터 설정 (월식·흑월, 말투 문구 전부). CH 리스트
+assets/images.json       캐릭터 이미지 data URI (wolsik, heukwol{land,face,face2,cover,past,pay,coverPos})
+assets/source/           원본 이미지 (canva/: 전생 36 · 배우자 10 · 듀오 원본)
 assets/vidu/             Vidu 첫 테스트용 참조 프레임 (흑월 시트에서 크롭)
 reference/halmakase/     레퍼런스 /saju 화면 캡처 40장 (입력·리포트·결제 흐름)
 dist/                    빌드 결과 + 정적 시안(character-36-types, ssangwol-duo)
@@ -127,7 +128,7 @@ for k in 0 1 2 3 4 5; do python3 tests/test_render.py $k 6; done   # 7일 간격
 7. **카피 컴플라이언스**: 누적 건수·만족도·후기·할인 타이머는 모두 "예시" 자리표시 → 실데이터로 교체 전 오픈 금지(표시광고법·전자상거래법).
 8. **이미지 에셋**: 2026-10-02 47장 생성 완료(전생 36 · 배우자 10 · 쌍월당 듀오 1) → `assets/img/` (`build.py`가 `dist/img/`로 복사, 리포트는 `img/past/NN.jpg` · `img/spouse/{오행}{f|m}.jpg` 참조). 프롬프트·Canva media id는 `assets/img/manifest.json`. 원본은 `assets/source/canva/`, 사이트용 축소본은 `assets/img/`. **남은 것: 듀오 컷을 쌍월당 페이지에 배치.**
 9. **Vidu 영상 파이프라인**: `docs/motion-bible.md` 기준. 첫 테스트는 무료 크레딧 1회(`docs/pending.md` 하단 설정). 결과물은 MP4+WebM, 클립당 2MB 이하로 랜딩·선택·로딩·결과 화면에 삽입.
-10. **월식사주·용궁사주·쌍월당**: 흑월 기준 최신 엔진으로 동기화 필요 시 `characters.py`만 손보면 됨(쌍월당은 별도 구조).
+10. **월식사주·쌍월당**: 흑월 기준 최신 엔진으로 동기화 필요 시 `characters.py`만 손보면 됨(쌍월당은 별도 구조).
 
 ## 8. 협업 메모
 - 서준님은 한국어, 짧고 직접적인 보고를 선호. 결과는 claude.ai 시안처럼 바로 열어볼 수 있게.
