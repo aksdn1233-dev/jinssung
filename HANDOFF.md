@@ -125,7 +125,7 @@ for k in 0 1 2 3 4 5; do python3 tests/test_render.py $k 6; done   # 7일 간격
 5. **음력 → 양력 변환표** (입력 화면 음력 선택 시). 고대신점도 음력 월·일로 정식 계산.
 6. **백엔드**: 결제(PG) · 결과 저장/다시 찾기 · 카카오 로그인 · 친구 초대 집계 → Ch5 잠금 해제 · 추가 질문은 넣지 않음(서준님: AI로 때우지 말 것).
 7. **카피 컴플라이언스**: 누적 건수·만족도·후기·할인 타이머는 모두 "예시" 자리표시 → 실데이터로 교체 전 오픈 금지(표시광고법·전자상거래법).
-8. **이미지 에셋**: 2026-10-02 47장 생성 완료(전생 36 · 배우자 10 · 쌍월당 듀오 1) → `assets/img/` (`build.py`가 `dist/img/`로 복사, 리포트는 `img/past/NN.jpg` · `img/spouse/{오행}{f|m}.jpg` 참조). 프롬프트·Canva media id는 `assets/img/manifest.json`. **남은 것: 원본 해상도 교체**(지금은 200px 미리보기) · 듀오 컷을 쌍월당 페이지에 배치.
+8. **이미지 에셋**: 2026-10-02 47장 생성 완료(전생 36 · 배우자 10 · 쌍월당 듀오 1) → `assets/img/` (`build.py`가 `dist/img/`로 복사, 리포트는 `img/past/NN.jpg` · `img/spouse/{오행}{f|m}.jpg` 참조). 프롬프트·Canva media id는 `assets/img/manifest.json`. 원본은 `assets/source/canva/`, 사이트용 축소본은 `assets/img/`. **남은 것: 듀오 컷을 쌍월당 페이지에 배치.**
 9. **Vidu 영상 파이프라인**: `docs/motion-bible.md` 기준. 첫 테스트는 무료 크레딧 1회(`docs/pending.md` 하단 설정). 결과물은 MP4+WebM, 클립당 2MB 이하로 랜딩·선택·로딩·결과 화면에 삽입.
 10. **월식사주·용궁사주·쌍월당**: 흑월 기준 최신 엔진으로 동기화 필요 시 `characters.py`만 손보면 됨(쌍월당은 별도 구조).
 
