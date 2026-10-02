@@ -1,0 +1,340 @@
+{
+ "note": "Canva 생성 2026-10-02. 저장소 파일은 200px 미리보기 — 원본은 canva_media_id 로 Canva에서 받기 (docs/pending.md).",
+ "past": [
+  {
+   "no": 1,
+   "file": "past/01.jpg",
+   "name": "베네치아 밤 운하로 밀서를 나르던 전령",
+   "canva_media_id": "MAHW2uHoob4",
+   "prompt": "webtoon style illustration, past-life portrait, a Venetian night courier poling a gondola through dark canals carrying a sealed letter, lantern light on the water, Renaissance Venice, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 2,
+   "file": "past/02.jpg",
+   "name": "한양 육의전에서 비단을 쥔 여상인",
+   "canva_media_id": "MAHW2r1oDAc",
+   "prompt": "Korean webtoon style illustration, Joseon dynasty past-life portrait, a sharp Joseon woman silk merchant with an abacus and ledgers in a lantern-lit market shop full of silk rolls, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 3,
+   "file": "past/03.jpg",
+   "name": "바그다드 찻집을 사로잡은 이야기꾼",
+   "canva_media_id": "MAHW2oRpirI",
+   "prompt": "webtoon style illustration, past-life portrait, a storyteller in a medieval Baghdad coffeehouse telling tales to a captivated crowd, brass oil lamps and carpets, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 4,
+   "file": "past/04.jpg",
+   "name": "서부 황무지에 마을을 세운 개척민",
+   "canva_media_id": "MAHW2j-i38o",
+   "prompt": "webtoon style illustration, past-life portrait, a weathered American frontier homesteader plowing barren prairie with an ox at dawn, a distant new settlement rising, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 5,
+   "file": "past/05.jpg",
+   "name": "대성당 기둥을 깎던 석공 장인",
+   "canva_media_id": "MAHW2h68qRQ",
+   "prompt": "webtoon style illustration, past-life portrait, a master medieval stonemason carving a massive gothic cathedral pillar, stone dust and wooden scaffolding, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 6,
+   "file": "past/06.jpg",
+   "name": "고갯마루 주막의 안주인",
+   "canva_media_id": "MAHW2qnYdi0",
+   "prompt": "Korean webtoon style illustration, Joseon dynasty past-life portrait, a warm Joseon tavern keeper woman ladling porridge from a large iron cauldron for travelers in winter, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 7,
+   "file": "past/07.jpg",
+   "name": "초원을 범처럼 달린 기마 선봉장",
+   "canva_media_id": "MAHW2vpN-80",
+   "prompt": "webtoon style illustration, past-life portrait, a fierce Mongol cavalry vanguard commander charging on horseback across a snowy steppe, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 8,
+   "file": "past/08.jpg",
+   "name": "변방 속주를 지킨 강직한 로마 총독",
+   "canva_media_id": "MAHW2kRKgvg",
+   "prompt": "webtoon style illustration, past-life portrait, an upright Roman provincial governor in a toga standing firm before villagers in a modest stone basilica, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 9,
+   "file": "past/09.jpg",
+   "name": "달밤에 류트를 뜯던 떠돌이 음유시인",
+   "canva_media_id": "MAHW2g8o7hs",
+   "prompt": "webtoon style illustration, past-life portrait, a lonely wandering medieval troubadour playing a lute under a full moon by a river, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 10,
+   "file": "past/10.jpg",
+   "name": "별을 읽어 달력을 고친 알렉산드리아 천문학자",
+   "canva_media_id": "MAHW2sUDmjk",
+   "prompt": "webtoon style illustration, past-life portrait, an ancient Alexandrian astronomer observing stars from a rooftop with brass instruments, starry night, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 11,
+   "file": "past/11.jpg",
+   "name": "약초 하나로 상단을 일군 실크로드 약재상",
+   "canva_media_id": "MAHW2hnYcjQ",
+   "prompt": "webtoon style illustration, past-life portrait, a quiet Silk Road herb and spice merchant sorting dried herbs in a caravanserai shop full of jars, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 12,
+   "file": "past/12.jpg",
+   "name": "역병 마을을 밤새 돌던 의녀",
+   "canva_media_id": "MAHW2iogbzI",
+   "prompt": "webtoon style illustration, past-life portrait, a devoted Joseon female physician carrying a lantern through a dark village at night, medicine bag, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 13,
+   "file": "past/13.jpg",
+   "name": "폭풍 너머 새 지도를 그려 온 항해사",
+   "canva_media_id": "MAHW2oJ_8LY",
+   "prompt": "webtoon style illustration, past-life portrait, an Age of Exploration navigator drawing a world map aboard a storm-battered sailing ship, dramatic sky, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 14,
+   "file": "past/14.jpg",
+   "name": "큰 강의 물길을 다스린 치수 관리",
+   "canva_media_id": "MAHW2rs9SHg",
+   "prompt": "webtoon style illustration, past-life portrait, a commanding ancient Chinese imperial official overseeing a great river dam construction, rain clouds parting, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 15,
+   "file": "past/15.jpg",
+   "name": "밤마다 용을 그리던 피렌체 화가",
+   "canva_media_id": "MAHW2oxfa0k",
+   "prompt": "webtoon style illustration, past-life portrait, a dreamy Renaissance painter painting a dragon among clouds on a large canvas by candlelight in a Florence studio, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 16,
+   "file": "past/16.jpg",
+   "name": "남보다 먼저 바다 건너 말을 익힌 항구 통역사",
+   "canva_media_id": "MAHW2hgo9sE",
+   "prompt": "webtoon style illustration, past-life portrait, a 17th-century port interpreter holding foreign books on a busy harbor with tall sailing ships, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 17,
+   "file": "past/17.jpg",
+   "name": "파라오의 보물고를 지킨 서기관",
+   "canva_media_id": "MAHW2lqPrxk",
+   "prompt": "webtoon style illustration, past-life portrait, a vigilant ancient Egyptian royal treasury scribe with papyrus ledgers among golden treasures in a dim vault, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 18,
+   "file": "past/18.jpg",
+   "name": "신전 깊은 곳의 신탁 무녀",
+   "canva_media_id": "MAHW2ns2FCU",
+   "prompt": "webtoon style illustration, past-life portrait, a mysterious Greek oracle priestess at Delphi interpreting visions in a smoky candlelit temple, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 19,
+   "file": "past/19.jpg",
+   "name": "사막을 건너던 대상의 우두머리",
+   "canva_media_id": "MAHW2q5C29E",
+   "prompt": "webtoon style illustration, past-life portrait, a caravan leader leading a line of camels across vast Sahara dunes at sunset, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 20,
+   "file": "past/20.jpg",
+   "name": "고향을 지키려 깃발을 든 반란군 지휘관",
+   "canva_media_id": "MAHW2qgUiOk",
+   "prompt": "webtoon style illustration, past-life portrait, a highland rebel commander raising a war banner before gathered villagers, smoke and dawn over the hills, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 21,
+   "file": "past/21.jpg",
+   "name": "유랑 서커스의 줄타기 곡예사",
+   "canva_media_id": "MAHW2l8levg",
+   "prompt": "webtoon style illustration, past-life portrait, a 19th-century circus tightrope walker balancing high above an awed crowd under a big top tent, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 22,
+   "file": "past/22.jpg",
+   "name": "설산 사원에서 수행한 수도승",
+   "canva_media_id": "MAHW2g0c614",
+   "prompt": "webtoon style illustration, past-life portrait, a serene monk meditating in a Himalayan mountain monastery surrounded by mist and prayer flags, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 23,
+   "file": "past/23.jpg",
+   "name": "백 칸 대저택 살림을 꾸린 하우스키퍼",
+   "canva_media_id": "MAHW2m7zooM",
+   "prompt": "webtoon style illustration, past-life portrait, a dignified head housekeeper with keys at her waist managing servants in a grand English manor hall, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 24,
+   "file": "past/24.jpg",
+   "name": "궁정 옷에 꽃을 수놓던 자수공",
+   "canva_media_id": "MAHW2iaMKko",
+   "prompt": "webtoon style illustration, past-life portrait, a delicate palace embroiderer stitching flowers on royal silk by a tall window in Versailles, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 25,
+   "file": "past/25.jpg",
+   "name": "꾀 하나로 성을 구한 책사",
+   "canva_media_id": "MAHW2kEe_hE",
+   "prompt": "webtoon style illustration, past-life portrait, a clever ancient Chinese strategist with a feather fan atop a besieged fortress wall at night, torches below, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 26,
+   "file": "past/26.jpg",
+   "name": "명검으로 가문을 일으킨 다마스쿠스 대장장이",
+   "canva_media_id": "MAHW2sddOx0",
+   "prompt": "webtoon style illustration, past-life portrait, a skilled Damascus blacksmith hammering a patterned steel blade in a glowing forge, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 27,
+   "file": "past/27.jpg",
+   "name": "광장을 휘어잡은 가면극 광대",
+   "canva_media_id": "MAHW2qDxgSc",
+   "prompt": "webtoon style illustration, past-life portrait, a commedia dell'arte masked performer playing to a festival crowd in a Venetian piazza, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 28,
+   "file": "past/28.jpg",
+   "name": "가장 먼저 봉화를 올린 성벽 파수꾼",
+   "canva_media_id": "MAHW2gQoMdU",
+   "prompt": "webtoon style illustration, past-life portrait, a watchtower guard lighting a signal fire on the Great Wall at dawn, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 29,
+   "file": "past/29.jpg",
+   "name": "흠 하나 허락하지 않은 왕관 세공사",
+   "canva_media_id": "MAHW2vAh4uQ",
+   "prompt": "webtoon style illustration, past-life portrait, a meticulous jeweler crafting an ornate silver crown under lamplight in an old Paris workshop, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 30,
+   "file": "past/30.jpg",
+   "name": "아리아 한 소절로 왕을 울린 프리마돈나",
+   "canva_media_id": "MAHW2o-3S9w",
+   "prompt": "webtoon style illustration, past-life portrait, a celebrated opera prima donna singing on a candlelit stage of a 19th-century opera house, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 31,
+   "file": "past/31.jpg",
+   "name": "안개 속 밀수꾼 소굴을 먼저 정탐한 탐정",
+   "canva_media_id": "MAHW2riClkI",
+   "prompt": "webtoon style illustration, past-life portrait, a female undercover detective scouting a smugglers' hideout at night in foggy Victorian London, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 32,
+   "file": "past/32.jpg",
+   "name": "영주의 곁을 지킨 사무라이",
+   "canva_media_id": "MAHW2jhrHTg",
+   "prompt": "webtoon style illustration, past-life portrait, a loyal samurai bodyguard standing guard before his lord's quarters at night, paper lanterns, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 33,
+   "file": "past/33.jpg",
+   "name": "버려진 아이들을 거둔 보육원 주인",
+   "canva_media_id": "MAHW2lwdMVY",
+   "prompt": "webtoon style illustration, past-life portrait, a kind caretaker in worn clothes surrounded by orphan children in a humble courtyard after a war, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 34,
+   "file": "past/34.jpg",
+   "name": "경전을 찾아 서쪽으로 떠난 구법승",
+   "canva_media_id": "MAHW2kJDrAA",
+   "prompt": "webtoon style illustration, past-life portrait, a pilgrim monk walking toward distant mountains carrying scriptures, long road and sunrise, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 35,
+   "file": "past/35.jpg",
+   "name": "송상을 이끈 개성의 대방",
+   "canva_media_id": "MAHW2ngWGss",
+   "prompt": "webtoon style illustration, past-life portrait, a generous Gaeseong merchant leader in a bustling trading house with ledgers and goods, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  },
+  {
+   "no": 36,
+   "file": "past/36.jpg",
+   "name": "바다 잔치를 열던 해녀 대상군",
+   "canva_media_id": "MAHW2oL5Gqc",
+   "prompt": "webtoon style illustration, past-life portrait, a strong haenyeo diver leader on a volcanic coastal rock with the sea and fellow divers, cinematic moody lighting, painterly, detailed, circular vignette composition with dark red glow background, no text, no watermark"
+  }
+ ],
+ "spouse": [
+  {
+   "file": "spouse/0f.jpg",
+   "element": "목",
+   "sex": "여",
+   "canva_media_id": "MAHW2q05uJY",
+   "prompt": "webtoon style illustration, upper-body portrait of a woman in her late twenties with an upright neat posture, tidy hair and clear calm eyes, bamboo garden at dusk, deep green and ivory, soft cinematic lighting, gentle expression, no text, no watermark"
+  },
+  {
+   "file": "spouse/0m.jpg",
+   "element": "목",
+   "sex": "남",
+   "canva_media_id": "MAHW2jJOwEQ",
+   "prompt": "webtoon style illustration, upper-body portrait of a man in his late twenties with an upright neat posture, tidy hair and clear calm eyes, bamboo garden at dusk, deep green and ivory, soft cinematic lighting, gentle expression, no text, no watermark"
+  },
+  {
+   "file": "spouse/1f.jpg",
+   "element": "화",
+   "sex": "여",
+   "canva_media_id": "MAHW2r2fA5g",
+   "prompt": "webtoon style illustration, upper-body portrait of a woman in her late twenties, warm and radiant with an expressive bright smile, lively evening street with warm lanterns, coral red and cream, soft cinematic lighting, no text, no watermark"
+  },
+  {
+   "file": "spouse/1m.jpg",
+   "element": "화",
+   "sex": "남",
+   "canva_media_id": "MAHW2joXWJE",
+   "prompt": "webtoon style illustration, upper-body portrait of a man in his late twenties, warm and radiant with an expressive bright smile, lively evening street with warm lanterns, coral red and cream, soft cinematic lighting, no text, no watermark"
+  },
+  {
+   "file": "spouse/2f.jpg",
+   "element": "토",
+   "sex": "여",
+   "canva_media_id": "MAHW2pKfn7s",
+   "prompt": "webtoon style illustration, upper-body portrait of a woman in her late twenties, calm and steady with soft features and a reassuring presence, cozy hanok library with warm wood, beige and earth tones, soft cinematic lighting, no text, no watermark"
+  },
+  {
+   "file": "spouse/2m.jpg",
+   "element": "토",
+   "sex": "남",
+   "canva_media_id": "MAHW2kM8xmU",
+   "prompt": "webtoon style illustration, upper-body portrait of a man in his late twenties, calm and steady with soft features and a reassuring presence, cozy hanok library with warm wood, beige and earth tones, soft cinematic lighting, no text, no watermark"
+  },
+  {
+   "file": "spouse/3f.jpg",
+   "element": "금",
+   "sex": "여",
+   "canva_media_id": "MAHW2l3h-gE",
+   "prompt": "webtoon style illustration, upper-body portrait of a woman in her late twenties with sharp defined features and a refined stylish outfit, minimal modern gallery with cool light, white and silver, soft cinematic lighting, no text, no watermark"
+  },
+  {
+   "file": "spouse/3m.jpg",
+   "element": "금",
+   "sex": "남",
+   "canva_media_id": "MAHW2n_kemk",
+   "prompt": "webtoon style illustration, upper-body portrait of a man in his late twenties with sharp defined features and a refined stylish outfit, minimal modern gallery with cool light, white and silver, soft cinematic lighting, no text, no watermark"
+  },
+  {
+   "file": "spouse/4f.jpg",
+   "element": "수",
+   "sex": "여",
+   "canva_media_id": "MAHW2vYUmZg",
+   "prompt": "webtoon style illustration, upper-body portrait of a woman in her late twenties with a soft deep gaze and quiet thoughtful expression, quiet lakeside at night with soft moonlight, navy and indigo, soft cinematic lighting, no text, no watermark"
+  },
+  {
+   "file": "spouse/4m.jpg",
+   "element": "수",
+   "sex": "남",
+   "canva_media_id": "MAHW2gfGPAI",
+   "prompt": "webtoon style illustration, upper-body portrait of a man in his late twenties with a soft deep gaze and quiet thoughtful expression, quiet lakeside at night with soft moonlight, navy and indigo, soft cinematic lighting, no text, no watermark"
+  }
+ ],
+ "duo": [
+  {
+   "file": "duo/ssangwol.jpg",
+   "canva_media_id": "MAHW2lSAVsY",
+   "references": {
+    "서월": "MAHW2iEf3rU",
+    "흑월": "MAHW2lnH5XY"
+   },
+   "prompt": "Two characters together in one scene, keep each character's exact face, hairstyle, outfit and art style from the reference images: on the left the woman from the first reference (eclipse priestess Seowol), on the right the man from the second reference (midnight bartender Heukwol). She looks at the viewer with a teasing gaze while he glances sideways at her with a faint smirk. A thin red string connects their wrists. Eclipse moonlight on her side and warm candlelight on his side blending in the middle, dark night background, cinematic, painterly webtoon style, upper bodies, no text, no watermark"
+  }
+ ]
+}

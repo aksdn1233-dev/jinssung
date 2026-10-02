@@ -12,6 +12,7 @@ dist/heukwol-reports.html 을 열고 입력 패널 값을 바꿔 renderAll() 을
 - 리포트 본문에 undefined / NaN / null / [object 노출
 - 탭 3개(무료·기본·심화) 또는 챕터가 비어 있음
 - 📐 근거 줄이 기준 입력보다 적음
+- 전생·배우자 이미지(dist/img/...)가 없거나 파일이 빠짐
 - 같은 입력을 두 번 계산했을 때 결과가 다름 (20건마다 1번)
 선행: python3 build.py · pip install playwright (버전이 안 맞으면 CHROMIUM_PATH 로 chromium 지정)
 """
@@ -53,7 +54,8 @@ SNAP = '''() => {
           tabs: document.querySelectorAll('.tab').length,
           free: document.querySelectorAll('#freeBox .page').length,
           ch: document.querySelectorAll('section.ch2').length,
-          why: (t.textContent.match(/📐 근거/g) || []).length};
+          why: (t.textContent.match(/📐 근거/g) || []).length,
+          imgs: [...document.querySelectorAll('img[src^="img/"]')].map(i => i.getAttribute('src'))};
 }'''
 
 
@@ -87,6 +89,9 @@ def main():
             bad = [w for w in BAD if w in s['text']]
             why_bad = s['why'] < min_why
             shape_bad = s['tabs'] != 3 or s['free'] != 5 or s['ch'] < 20
+            missing = [x for x in s['imgs'] if not os.path.exists(os.path.join(ROOT, 'dist', x))]
+            if len(s['imgs']) < 2 or missing:
+                bad.append('이미지 누락 ' + ','.join(missing or ['전생/배우자']))
             if i % 20 == 0:
                 again = run(page, i, day)
                 if again['text'] != s['text']:
