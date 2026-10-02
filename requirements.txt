@@ -1,0 +1,2 @@
+ephem>=4.1
+playwright>=1.40

@@ -66,9 +66,13 @@ docs/pending.md          서준님 확인·지원 필요 목록
 ```bash
 python3 build.py                                   # dist/ 갱신
 python3 tests/test_calc_full.py                    # 648,144건 (1900-01-01~오늘 × 14시간) — 기대: errors 0
-for k in 0 1 2 3 4 5; do python3 tests/test_render.py $k 6; done   # 약 6,600명 렌더 — 기대: failures []
+for k in 0 1 2 3 4 5; do python3 tests/test_render.py $k 6; done   # 7일 간격 + 경계일 렌더 — 기대: n_fail 0
 ```
-마지막 검증(2026-10-02): 계산 648,144건 오류 0 · 렌더 6,614명 + 경계일 566건 오류 0.
+의존: node · `pip install -r requirements.txt` (ephem, playwright). playwright 브라우저 버전이 안 맞으면 `CHROMIUM_PATH`로 chromium 지정.
+- `test_calc_full.py`: 년주·월주를 ephem(VSOP87) 태양 황경으로, 일주를 파이썬 날짜로, 시주를 오서둔 표로 따로 계산해 엔진과 대조. 절기 경계 0.02°(약 29분) 이내 불일치는 저정밀식 한계라 `edge_skipped`로만 셈.
+- `test_render.py`: JS 오류 · undefined/NaN/null 노출 · 탭/챕터 누락 · 📐 근거 줄 감소 · 같은 입력 재계산 불일치를 실패로 셈.
+
+마지막 검증(2026-10-02, 저장소 복원 후): 계산 648,144건 오류 0 (경계 60건 제외) · 렌더 6,614명 + 경계일 568건 오류 0.
 
 ---
 
@@ -114,7 +118,7 @@ for k in 0 1 2 3 4 5; do python3 tests/test_render.py $k 6; done   # 약 6,600�
 
 ## 7. 알려진 한계 · 다음 작업 (우선순위)
 
-1. **저장소 정리**: 이 폴더를 innerarc에 커밋. `dist/`는 빌드 산출물(CI에서 생성 권장).
+1. ~~**저장소 정리**~~ (2026-10-02 완료, jinssung 저장소): 소스는 게시본에서 복원, 테스트 재작성. 원본 이미지·레퍼런스 캡처는 아직 미업로드(`docs/pending.md`). `dist/`는 빌드 산출물(CI에서 생성 권장).
 2. **이미지를 data URI → 파일로 분리**: 현재 HTML 하나가 0.2~0.5MB. `assets/` 경로 참조로 바꾸면 가벼워짐.
 3. **JS 모듈화**: tpl.html 안의 엔진·라이브러리·렌더러를 `engine.js / content/*.js / render.js`로 분리하고, 계산 엔진은 node 단위 테스트로.
 4. **태령당 수비학 교체**: `LP/LPD/POKE/PY` 계열과 Ch1·기본 Ch5~6·심화 2·5의 숫자 파트. 자료 받으면 교체(근거 문구 포함).
